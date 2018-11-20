@@ -1,0 +1,19 @@
+{
+  "name": "website-design",
+  "version": "1.0.0",
+  "description": "Initial Website Design",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nikhil10apr/website-design.git"
+  },
+  "author": "Nikhil Koul",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nikhil10apr/website-design/issues"
+  },
+  "homepage": "https://github.com/nikhil10apr/website-design#readme"
+}
