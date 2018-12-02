@@ -1,14 +1,24 @@
+const webpack = require('webpack');
 const path = require('path');
 //const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+const VENDOR = ['lodash', 'react', 'react-dom'];
 
 module.exports = {
 	mode: 'development',
-	entry: './src/index.js',
+	entry: {
+		bundle: './source/index.js',
+		vendor: VENDOR
+	},
 	output: {
 		path: path.resolve(__dirname, 'dist'),
-		filename: 'bundle.js',
-		publicPath: 'dist/'//This is used whenever a loader creates a new file.
+		filename: '[name].[chunkhash].js',
+		publicPath: '/'//This is used whenever a loader creates a new file.
 	},
+	/*devServer: {
+		contentBase: './dist'
+	},*/
 	module: {
 		rules: [
 			{
@@ -47,8 +57,14 @@ module.exports = {
 				]
 			}
 		]
-	}
-	/*plugins: [
-		new ExtractTextPlugin('style.css')//all the css files caught by css-loader is pasted in this file
-	]*/
+	},
+	plugins: [
+		//new ExtractTextPlugin('style.css')//all the css files caught by css-loader is pasted in this file
+		/*new webpack.optimize.CommonsChunkPlugin({
+			name: 'vendor'
+		}),*/
+		new HtmlWebpackPlugin({
+			template: 'source/index.html'
+		})
+	]
 };
