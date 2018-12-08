@@ -1,16 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { Route, Redirect, withRouter, Switch } from 'react-router-dom';
 
+import { Header } from './header/index';
 import App from './App';
 
+import '../../styles/base.css';
+
 const Root = () => (
-  <div>
-    <p />
-    <Switch>
-      <Route path="/" component={App} />
-    </Switch>
+  <div className='root'>
+    <Header />
+    <App />
   </div>
 )
 

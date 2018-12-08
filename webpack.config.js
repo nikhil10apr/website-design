@@ -3,22 +3,18 @@ const path = require('path');
 //const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-const VENDOR = ['lodash', 'react', 'react-dom'];
-
 module.exports = {
 	mode: 'development',
-	entry: {
-		bundle: './source/index.js',
-		vendor: VENDOR
-	},
+	entry: [
+    	'webpack-hot-middleware/client?reload=true',
+		'./source/index.js'
+	],
 	output: {
 		path: path.resolve(__dirname, 'dist'),
-		filename: '[name].[chunkhash].js',
+		filename: '[name].[hash].js',
 		publicPath: '/'//This is used whenever a loader creates a new file.
 	},
-	/*devServer: {
-		contentBase: './dist'
-	},*/
+	devtool: 'inline-source-map',
 	module: {
 		rules: [
 			{
@@ -63,6 +59,7 @@ module.exports = {
 		/*new webpack.optimize.CommonsChunkPlugin({
 			name: 'vendor'
 		}),*/
+		new webpack.HotModuleReplacementPlugin(),
 		new HtmlWebpackPlugin({
 			template: 'source/index.html'
 		})

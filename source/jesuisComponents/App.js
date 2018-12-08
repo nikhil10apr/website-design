@@ -27,7 +27,7 @@ class App extends React.Component {
 	}
 
 	render() {
-		return this.state.pagestate === 'inputName' ? this.renderInputField() : this.renderWelcomeScreen();
+		return <div></div>
 	}
 }
 

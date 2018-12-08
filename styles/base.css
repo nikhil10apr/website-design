@@ -1,0 +1,25 @@
+#container, .root {
+    height: 100%;
+}
+
+#container {
+	width: 100%;
+	background-image: url('../assets/background-1.jpg');
+}
+
+.root {
+	width: 70%;
+	margin: auto;
+	background-color: #fff;
+	box-shadow: -8px 0px 15px 5px rgba(0, 0, 0, 0.2), 8px 0px 15px 5px rgba(0, 0, 0, 0.19);
+}
+
+
+/*Shop Specific CSS*/
+
+.shop-root {
+	width: 100%;
+	background-color: #fff;
+	margin: 10px;
+	height: 100%;
+}
