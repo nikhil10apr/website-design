@@ -1,0 +1,52 @@
+.main-container {
+	display: flex;
+}
+
+.filterSection {
+	flex: 1 1;
+	padding: 5px;
+	background-color: #E8E8E8;
+}
+
+.mainSection {
+	flex: 5 1;
+	padding: 5px;
+}
+
+.gridSection {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.productTile {
+	width: 25%;
+	height: 400px;
+	margin-bottom: 10px;
+	cursor: pointer;
+}
+
+.productTile:hover {
+	box-shadow: -8px 0px 15px 5px rgba(0, 0, 0, 0.2), 8px 0px 15px 5px rgba(0, 0, 0, 0.19);
+}
+
+.productImage {
+	height: 90%;
+	padding: 5px;
+	border: solid 1px #d5d5d5;
+	box-sizing: border-box;
+}
+
+.pricing {
+	padding: 5px;
+	border: solid 1px #d5d5d5;
+}
+
+.pricing span {
+	line-height: 28px;
+}
+
+.pricing button {
+	height: 28px;
+	float: right;
+	cursor: pointer;
+}

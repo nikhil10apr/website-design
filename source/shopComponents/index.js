@@ -3,14 +3,14 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 import { Header } from './header/index';
+import { Main } from './main';
 
 import '../../styles/base.css';
 
 const ShopRoot = () => (
   <div className='shop-root'>
     <Header />
-    Inside Shop! Buy Now...
-    <div>Checking Again</div>
+    <Main />
   </div>
 )
 
