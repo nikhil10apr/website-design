@@ -1,33 +1,53 @@
 import React from "react";
 
+import './home2.css';
+
 class App extends React.Component {
 	constructor() {
 		super();
 		this.state = {
-			pagestate: 'inputName',
-			name: ''
+			menuStatus: false
 		};
-
 		this.onBlur = this.onBlur.bind(this);
+		this.onClick = this.onClick.bind(this);
 	}
 
-	onBlur(e) {
+	onBlur() {
 		this.setState({
-			pagestate: 'welcomeScreen',
-			name: e.currentTarget.value
-		})
+			menuStatus: false
+		});
 	}
 
-	renderInputField() {
-		return <input onBlur={this.onBlur}/>
-	}
-
-	renderWelcomeScreen() {
-		return <p>Welcome! {this.state.name}</p>
+	onClick() {
+		this.setState({
+			menuStatus: true
+		});
 	}
 
 	render() {
-		return <div></div>
+		let menuButtonClass, menuBarClass;
+		if(this.state.menuStatus) {
+			menuButtonClass = 'hide';
+			menuBarClass = 'menuBar';
+		} else {
+			menuButtonClass = 'menuButton';
+			menuBarClass = 'hide';
+		}
+
+		return <React.Fragment>
+			<div className={menuButtonClass} onClick={this.onClick}>
+				<i class="fas fa-bars"></i>
+			</div>
+			<div onBlur={this.onBlur} className={menuBarClass}>
+
+			</div>
+			<div className='mainImageComponent'>
+				<h1>Hi! I am Nikhil</h1>
+			</div>
+			<div className='briefing'>
+				<h1>I love to Code and Shoot</h1>
+			</div>
+		</React.Fragment>
 	}
 }
 

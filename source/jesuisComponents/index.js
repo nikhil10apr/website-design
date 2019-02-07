@@ -11,7 +11,7 @@ import Carousal1 from '../../assets/carousal1.jpg';
 import Carousal2 from '../../assets/carousal2.jpg';
 import Carousal3 from '../../assets/carousal3.jpg';
 
-const Root = () => (
+const Root = () => (<div className='backdrop'>
   <div className='root'>
     <Header />
     <CarousalComponent>
@@ -20,6 +20,7 @@ const Root = () => (
     	<img className={'carousal-image'} alt="carousal image 3" src={Carousal3} />
     </CarousalComponent>
   </div>
+</div>  
 )
 
 Root.propTypes = {
