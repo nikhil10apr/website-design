@@ -1,10 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-import style from './carousal.css';
+import style from './carousal.scss';
 
 export class CarousalComponent extends React.Component {
 	constructor(props) {
-		super(props);
+		super();
 		this.state = {
 			totalItems: props.children.length,
 			selectedIndex: 0
@@ -27,14 +28,22 @@ export class CarousalComponent extends React.Component {
 	}
 
 	render() {
+		const { children, leftButtonClass, rightButtonClass } = this.props;
+
 		return <div className={`carousal-container`}>
-			{this.props.children[this.state.selectedIndex]}
-			<i className={`fa fa-angle-left left-arrow`} onClick={this.previous}></i>
-			<i className={`fa fa-angle-right right-arrow`} onClick={this.next}></i>
+			{children[this.state.selectedIndex]}
+			<i className={leftButtonClass} onClick={this.previous}></i>
+			<i className={rightButtonClass} onClick={this.next}></i>
 		</div>;
 	}
 }
 
+CarousalComponent.defaultProps = {
+	leftButtonClass: 'fa fa-angle-left left-arrow',
+	rightButtonClass: 'fa fa-angle-right right-arrow'
+};
+
 CarousalComponent.propTypes = {
-  
+  leftButtonClass: PropTypes.string,
+  rightButtonClass: PropTypes.string
 }

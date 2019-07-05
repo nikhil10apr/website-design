@@ -23,13 +23,14 @@ module.exports = {
 				use: 'babel-loader'
 			},
 			{
-				test: /\.css$/,
+				test: /\.(css|scss)$/,
 				/*loader: ExtractTextPlugin.extract({
 					loader: 'css-loader'
 				})*/
 				use: [
 					'style-loader',
-					'css-loader'
+					'css-loader',
+					"sass-loader"
 				]
 			},
 			{

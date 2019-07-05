@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+SC');
+@import './variables.scss';
 
 * {
 	font-family: 'Noto Sans SC', sans-serif;
-	color: #000;
+	color: $black;
 }
 
 html, body, h1 {
@@ -16,7 +17,7 @@ html, body, h1 {
 }
 
 a, a:hover, a:visited, a:focus {
-	color: #000;
+	color: $black;
 }
 
 img {

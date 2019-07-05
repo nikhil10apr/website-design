@@ -1,9 +1,11 @@
+@import '../../../styles/variables.scss';
+
 .header {
 	position: relative;
 	width: 100%;
 	height: 100px;
-	background-color: #d3d3d3;
-	color: #000;
+	background-color: $grey;
+	color: $black;
 }
 
 .header h1 {
@@ -18,7 +20,7 @@
 }
 
 .header a:hover {
-	border-bottom: solid 3px maroon;
+	border-bottom: solid 3px $maroon;
 }
 
 .header a {

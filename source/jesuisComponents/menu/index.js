@@ -1,6 +1,6 @@
 import React from "react";
 
-import './menu.css';
+import './menu.scss';
 
 class Menu extends React.Component {
 	constructor() {

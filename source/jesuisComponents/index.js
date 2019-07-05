@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import { Header } from './header/index';
 import { CarousalComponent } from './carousal';
 
-import '../../styles/base.css';
+import '../../styles/base.scss';
 
 import Carousal1 from '../../assets/carousal1.jpg';
 import Carousal2 from '../../assets/carousal2.jpg';

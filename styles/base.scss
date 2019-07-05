@@ -1,3 +1,5 @@
+@import './variables.scss';
+
 #container {
 	width: 1680px;
 	height: 865px;
@@ -13,7 +15,7 @@
 .root {
 	width: 80%;
 	margin: auto;
-	background-color: #fff;
+	background-color: $white;
 	box-shadow: -8px 0px 15px 5px rgba(0, 0, 0, 0.2), 8px 0px 15px 5px rgba(0, 0, 0, 0.19);
 }
 
@@ -21,6 +23,6 @@
 /*Shop Specific CSS*/
 
 .shop-root {
-	background-color: #fff;
+	background-color: $white;
 	margin: auto;
 }

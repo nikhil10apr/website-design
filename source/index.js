@@ -6,7 +6,7 @@ import { BrowserRouter } from 'react-router-dom'
 import { store } from './store';
 import App from './App';
 
-import '../styles/sharedStyles.css';
+import '../styles/sharedStyles.scss';
 
 const render = () => ReactDOM.render(
 	<Provider store={store}>
@@ -21,7 +21,7 @@ if (module.hot) {
   // Hot reloadable React components and translation json files
   // modules.hot.accept does not accept dynamic dependencies,
   // have to be constants at compile-time
-  module.hot.accept(['./App', './shopComponents/index'], () => {
+  module.hot.accept(['./App'], () => {
     console.log('HOT RELOADED');
     ReactDOM.unmountComponentAtNode(document.getElementById("container"));
     render();
